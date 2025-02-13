@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Envelope</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #FFF0F5;
+            font-family: Arial, sans-serif;
+            perspective: 1000px;
+        }
+
+        .envelope-container {
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .envelope-container:hover {
+            transform: scale(1.05);
+        }
+
+        .envelope {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .envelope-front {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background-color: #FF1493;
+            clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 100%, 0 100%);
+        }
+
+        .envelope-flap {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background-color: #FF69B4;
+            clip-path: polygon(0 25%, 50% 0, 100% 25%, 50% 50%);
+            transform-origin: top;
+            transition: transform 0.5s;
+        }
+
+        .envelope.open .envelope-flap {
+            transform: rotateX(180deg);
+        }
+
+        .letter {
+            position: absolute;
+            width: 280px;
+            height: 180px;
+            background-color: white;
+            top: 10px;
+            left: 10px;
+            transition: transform 0.5s;
+            z-index: -1;
+        }
+
+        .envelope.open .letter {
+            transform: translateY(-100px);
+        }
+
+        .open-text {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #FF1493;
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="envelope-container" onclick="openEnvelope()">
+        <div class="envelope">
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+            <div class="letter"></div>
+        </div>
+        <div class="open-text">Click to Open!</div>
+    </div>
+
+    <script>
+        function openEnvelope() {
+            const envelope = document.querySelector('.envelope');
+            envelope.classList.add('open');
+            setTimeout(() => {
+                window.location.href = 'valentine.html';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

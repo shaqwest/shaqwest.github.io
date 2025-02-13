@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF0F5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #FF1493;
+        }
+
+        .container {
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.2);
+            padding: 40px;
+            text-align: center;
+            max-width: 800px;
+            width: 90%;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #FF1493;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .gif-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .gif-box {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border: 3px solid #FF69B4;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .gif-box:hover {
+            transform: scale(1.05);
+        }
+
+        .gif-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .heart {
+            display: inline-block;
+            color: #FF1493;
+            animation: beat 0.8s infinite alternate;
+            transform-origin: center;
+        }
+
+        @keyframes beat {
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #FF1493;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .close-btn:hover {
+            background-color: #FF69B4;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .gif-box {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="close-btn" onclick="closeEnvelope()">×</button>
+        <h1>Happy Valentine's Day!</h1>
+        <p>Happy Valentine day ndud! bunga bisa layu, coklat bisa habis, tapi ini bisa di liat sampai kapan pun :D
+            semoga kamu makin rajin belajar dan tambah pinter, jangan gampang nyerah dan tanya chatgpt wkwk
+            enjoy your day! nanti kita ke melipir kalo kamu sempat habis rapat yhh
+        </p>
+        <p>Will you be my Valentine today and always? <span class="heart">❤️</span></p>
+        <div class="gif-container">
+            <div class="gif-box">
+                <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTZpa3U1Nzhuczg2OWNwOXJyOGsyaXp4ODR3YnFnNTd6NmY4czZ2YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OVvrRFQobaLv0Ije9h/giphy.gif" alt="Romantic GIF 1">
+            </div>
+            <div class="gif-box">
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTBxZzQ3bGduanZ4NDJwd28yOXV0cDh3bTV1NDZ4bzhsM3Nkbjh3dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wOuqaCWDQ6riWlHPwR/giphy.gif" alt="Romantic GIF 2">
+            </div>
+            <div class="gif-box">
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGtlMjgycjR5MmcwdGg1d294NDNjYWx0b204Yng4ODE4MWtrNmhrZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o84uF5ytMpUO25kLtR/giphy.gif" alt="Romantic GIF 3">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function closeEnvelope() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
